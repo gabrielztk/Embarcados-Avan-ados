@@ -1,1 +1,1 @@
-# Embarcados-Avan-ados
+# SoC e Linux Embarcado
