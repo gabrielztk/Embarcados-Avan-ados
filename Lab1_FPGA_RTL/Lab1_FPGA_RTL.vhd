@@ -7,7 +7,8 @@ entity Lab1_FPGA_RTL is
         fpga_clk_50   : in  std_logic;        
 
         -- I/Os
-        fpga_led_pio  : out std_logic_vector(5 downto 0)
+        fpga_led_pio  : out std_logic_vector(5 downto 0);
+		  fpga_butt_pio : in std_logic_vector(3 downto 0)
   );
 end entity Lab1_FPGA_RTL;
 
@@ -22,7 +23,7 @@ begin
       variable counter : integer range 0 to 25000000 := 0;
       begin
         if (rising_edge(fpga_clk_50)) then
-                  if (counter < 10000000) then
+                  if (counter < 25000000) then
                       counter := counter + 1;
                   else
                       blink <= not blink;
